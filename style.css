@@ -196,7 +196,7 @@ a {
 /*-----------hero section------------*/
 
 .main-hero {
-    background-image: url("/images/hero/hero-image.jpg");
+    background-image: url("images/hero/hero-image.jpg");
     background-size: cover;
     background-position: bottom center;
     min-height: 500px;
