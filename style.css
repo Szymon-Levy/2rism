@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    --main-color: #7B61FF;
+    --light-gray: #979797;
+}
+
+/*----------Global-----------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    font-weight: 400;
+}
+.container{
+    padding: 0 15px;
+    max-width: 1376px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+
+/*-------header--------*/
+
+#main-header{
+    position: absolute;
+    padding: 15px 0;
+    width: 100%;
+}
+
+#main-header .container{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    cursor: pointer;
+}
+
+.header-logo img{
+    width: 110px;
+}
+
+#main-header .profile-info{
+    margin-left: auto;
+    padding-right: 30px;
+}
+
+#main-header .profile-info .person {
+    display: flex;
+    align-items: center;
+}
+
+#main-header .profile-info .person .info{
+    text-align: right;
+    padding-right: 8px;
+}
+
+#main-header .profile-info .person .info p{
+    color: var(--light-gray);
+    font-size: 14px;
+}
+
+#main-header .profile-info .person .info h4{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#main-header .profile-info .person .avatar{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#main-header .profile-info .person .avatar img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+#main-header .profile-info .person .avatar .status{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+}
+
+#main-header .profile-info .person .avatar .status.offline{
+    background-color: #FF0000;
+}
+
+.offcanvas-toggler {
+    width: 25px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+
+.offcanvas-toggler div{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+}
+
+.offcanvas-toggler div:nth-child(1){
+    top: 0;
+    transition: .4s;
+}
+
+.offcanvas-toggler div:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.offcanvas-toggler div:nth-child(3){
+    bottom: 0;
+    transition: .6s;
+}
+
+.offcanvas-toggler.active div:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.offcanvas-toggler.active div:nth-child(2){
+    display: none;
+}
+
+.offcanvas-toggler.active div:nth-child(3){
+    top: 50%;
+    transform: translateY(-50%) rotate(-225deg);
+}
+
+#main-navigation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    left: 100%;
+    background-color: black;
+    z-index: 10;
+    transition: left .4s ease-in-out, opacity .4s linear;
+    opacity: .4;
+    overflow: hidden;
+}
+
+#main-navigation.active {
+    left: 0;
+    opacity: 1;
+}
+
+#main-navigation ul {
+    position: relative;
+    bottom: -150px;
+    opacity: 0;
+    transition: .6s linear;
+    transition-delay: .3s;
+}
+
+#main-navigation.active ul{
+    bottom: 0px;
+    opacity: 1;
+}
+
+#main-navigation ul li{
+    margin: 10px 0;
+}
+
+#main-navigation ul li a {
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+
+
+
+/*-----------hero section------------*/
+
+.main-hero {
+    background-image: url("/images/hero/hero-image.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 500px;
+}
+
+
+
+
+
+/*------------Responsive rules--------------*/
+
+@media (min-width: 767px) {
+    .container{
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: 991px) {
+    .container{
+        padding: 0 45px;
+    }
+    .offcanvas-toggler {
+        display: none;
+    }
+    #main-header .profile-info {
+        padding-right: 00px;
+    }
+    #main-navigation {
+        display: flex;
+        justify-content: center;
+        opacity: 1;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        flex-grow: 1;
+        width: auto;
+        transition: none;
+    }
+    #main-navigation ul {
+        position: static;
+        opacity: 1;
+        display: flex;
+        transition: none;
+    }
+    #main-navigation ul li {
+        margin: 0 12px;
+    }
+    #main-navigation ul li a {
+        color: var(--light-gray);
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 1199px) {
+    .container{
+        padding: 0 80px;
+    }
+    #main-navigation ul li a {
+        font-size: 14px;
+    }
+}
