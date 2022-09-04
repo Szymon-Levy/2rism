@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2rism - Home</title>
     <link rel="icon" type="image/x-icon" href="images/logo/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +14,9 @@
     <header id="main-header">
         <div class="container">
             <div class="header-logo">
-                <img src="images/logo/logo-white.svg" alt="logo">
+                <a href="/">
+                    <img src="images/logo/logo-white.svg" alt="logo">
+                </a>
             </div>
             <nav id="main-navigation">
                 <ul>
@@ -21,22 +24,22 @@
                         <a class="active" href="#">Home</a>
                     </li>
                     <li>
-                        <a class="active" href="#">Hotels</a>
+                        <a href="#">Hotels</a>
                     </li>
                     <li>
-                        <a class="active" href="#">Restaurants</a>
+                        <a href="#">Restaurants</a>
                     </li>
                     <li>
-                        <a class="active" href="#">Tours</a>
+                        <a href="#">Tours</a>
                     </li>
                     <li>
-                        <a class="active" href="#">Destinations</a>
+                        <a href="#">Destinations</a>
                     </li>
                     <li>
-                        <a class="active" href="#">Activities</a>
+                        <a href="#">Activities</a>
                     </li>
                     <li>
-                        <a class="active" href="#">Contact</a>
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -61,7 +64,47 @@
     </header>
 
     <section class="main-hero">
-
+        <div class="small-container">
+            <div class="title-wrap">
+                <h1 class="animate__animated animate__zoomIn">Discover the most engaging places</h1>
+                <a href="#" class="big-button"><img src="images/additional/big-button-icon.svg" alt="discover">Discover on 3D Globe</a>
+            </div>
+            <div class="search-wrap animate__animated animate__fadeInLeft">
+                <div class="search-items">
+                    <div class="search-item">
+                        <div class="icon"><img src="images/additional/search-map-pin-icon.svg" alt="location"></div>
+                        <div class="info">
+                            <p>Location</p>
+                            <h5>Explore nearby destinations</h5>
+                        </div>
+                    </div>
+                    <div class="search-item">
+                        <div class="icon"><img src="images/additional/search-riding-icon.svg" alt="location"></div>
+                        <div class="info">
+                            <p>Activity</p>
+                            <h5>All Activities</h5>
+                        </div>
+                    </div>
+                    <div class="search-item">
+                        <div class="icon"><img src="images/additional/search-calendar-icon.svg" alt="location"></div>
+                        <div class="info">
+                            <p>When</p>
+                            <h5>Choose a Date</h5>
+                        </div>
+                    </div>
+                    <div class="search-item">
+                        <div class="icon"><img src="images/additional/search-user-icon.svg" alt="location"></div>
+                        <div class="info">
+                            <p>Guests</p>
+                            <h5>1 guest</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-button">
+                    <button><img src="images/additional/search-icon.svg" alt="search"></button>
+                </div>
+            </div>
+        </div>
     </section>
     
 
