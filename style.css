@@ -506,6 +506,9 @@ section.popular-grid .container.grid{
     section.popular-grid .container.grid {
         grid-template-columns: repeat(6, 1fr);
     }
+    .main-box:not(:last-child) {
+        margin-bottom: 0px;
+    }
 }
 
 @media (min-width: 1450px) {
