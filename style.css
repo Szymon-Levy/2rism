@@ -26,6 +26,7 @@ body{
     margin: 0 auto;
 }
 .container.grid{
+    display: grid;
     gap: 30px;
 }
 .small-container{
@@ -54,6 +55,12 @@ h4{
 .main-heading {
     margin-bottom: 50px;
 }
+.title-with-button .main-heading {
+    margin-bottom: 20px;
+}
+.container.title-with-button {
+    margin-bottom: 50px;
+}
 .main-heading h2{
     color: var(--dark-color);
     line-height: 1.2;
@@ -78,6 +85,23 @@ h4{
 .big-button img{
     width: 20px;
     margin-right: 10px;
+}
+a.main-button {
+    background-color: #F6F4FF;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 12px;
+    transition: .4s;
+}
+a.main-button:hover{
+    transform: scale(1.08);
+}
+a.main-button img {
+    width: 13px;
+    margin-left: 7px;
 }
 
 
@@ -389,12 +413,44 @@ section.popular-grid {
 }
 
 section.popular-grid .container.grid{
-    display: grid;
     grid-template-columns: 1fr;
 }
 
 
+/*--------------Hotels----------------*/
 
+section.hotels-grid {
+    padding-bottom: 70px;
+}
+
+.main-box .content .location-rate {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.main-box .content .location-rate .location {
+    display: flex;
+    align-items: center;
+}
+
+.main-box .content .location-rate .location img{
+    width: 12px;
+    margin-right: 6px;
+}
+
+.main-box .content .location-rate .location span{
+    color: var(--light-gray);
+    font-size: 13px;
+}
+
+.main-box .content .location-rate .rate{
+    display: flex;
+}
+
+.main-box .content .location-rate .rate img{
+    width: 15px;
+}
 
 
 
@@ -422,6 +478,17 @@ section.popular-grid .container.grid{
     }
     section.popular-grid .container.grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    section.hotels-grid .container.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .title-with-button .main-heading {
+        margin-bottom: 0px;
+    }
+    .container.title-with-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -503,13 +570,20 @@ section.popular-grid .container.grid{
     section.popular-grid {
         padding: 120px 0;
     }
+    section.hotels-grid {
+        padding-bottom: 120px;
+    }
     section.popular-grid .container.grid {
         grid-template-columns: repeat(6, 1fr);
     }
     .main-box:not(:last-child) {
         margin-bottom: 0px;
     }
+    section.hotels-grid .container.grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
+
 
 @media (min-width: 1450px) {
     .main-hero {
