@@ -25,6 +25,9 @@ body{
     max-width: 1536px;
     margin: 0 auto;
 }
+.container.grid{
+    gap: 30px;
+}
 .small-container{
     padding: 0 15px;
     width: 100%;
@@ -42,6 +45,20 @@ a {
 h1{
     font-size: 28px;
     line-height: 1.3;
+}
+h4{
+    color: var(--dark-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+.main-heading {
+    margin-bottom: 50px;
+}
+.main-heading h2{
+    color: var(--dark-color);
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 25px;
 }
 .big-button{
     background-color: var(--main-color);
@@ -315,10 +332,79 @@ h1{
 
 
 
+/*----------Main boxes global-----------*/
+
+.main-box{
+    width: 100%;
+}
+
+.main-box:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.main-box .img-wrap a{
+    position: relative;
+    display: flex;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.main-box .img-wrap a::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url("images/additional/eye.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    transition: .4s;
+    opacity: 0;
+}
+
+.main-box .img-wrap:hover a::after{
+    opacity: 1;
+}
+
+.main-box .content{
+    margin-top: 10px;
+}
+
+.main-box .content p {
+    color: var(--light-gray);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+
+/*-------------Popular destinations---------------*/
+
+section.popular-grid {
+    padding: 70px 0;
+}
+
+section.popular-grid .container.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+
 
 
 
 /*------------Responsive rules--------------*/
+
+@media (min-width: 421px) {
+    section.popular-grid .container.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (min-width: 768px) {
     .container{
@@ -333,6 +419,9 @@ h1{
     }
     .main-hero .search-wrap .search-items .search-item {
         width: 50%;
+    }
+    section.popular-grid .container.grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -389,6 +478,9 @@ h1{
         width: 60px;
         height: 100%;
     }
+    .main-heading h2{
+        font-size: 32px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -407,6 +499,12 @@ h1{
     .big-button{
         font-size: 18px;
         padding: 20px 22px;
+    }
+    section.popular-grid {
+        padding: 120px 0;
+    }
+    section.popular-grid .container.grid {
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
