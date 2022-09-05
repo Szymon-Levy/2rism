@@ -7,6 +7,7 @@
     <title>2rism - Home</title>
     <link rel="icon" type="image/x-icon" href="images/logo/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -197,7 +198,7 @@
 
     <section class="hotels-grid">
         <div class="container title-with-button">
-            <div class="main-heading">
+            <div class="main-heading" data-aos="fade-up">
                 <h2>Hotels and Restaurants</h2>
             </div>
             <div class="button-wrap">
@@ -307,8 +308,159 @@
             </div>
         </div>
     </section>
+
+    <section class="tips-grid">
+        <div class="container title-with-button">
+            <div class="main-heading">
+                <h2>Travel Tips and Advice</h2>
+            </div>
+            <div class="button-wrap">
+                <a class="main-button" href="#">View all <img src="images/additional/button-arrow.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="container grid">
+            <div class="main-box">
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="images/tips/tip1.jpg" alt="Big Sur">
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="intro">
+                        <h3><a href="#">East Village Ice Cream Crawl</a></h3>
+                        <p>We will stop at five different world-class ice cream shops on this 1.5 mile 
+                        1.5 hour tour. At each ice cream store we'll explore the story behind the 
+                        business and see what makes the ice cream unique as you savor every…
+                        </p>
+                    </div>
+                    <div class="bottom-info">
+                        <div class="info">
+                            <a href="#">
+                                <img src="images/tips/calendar.svg" alt="">
+                                <span>Today</span>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="#">
+                                <img src="images/tips/user.svg" alt="">
+                                <span>Maria Philips</span>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="#">
+                                <img src="images/tips/comment.svg" alt="">
+                                <span>2</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-box">
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="images/tips/tip2.jpg" alt="Big Sur">
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="intro">
+                        <h3><a href="#">Brooklyn Bridge cinematic photo walk</a></h3>
+                        <p>This experience takes place at the Brooklyn Bridge Park and Brooklyn Bridge, 
+                            but I’m always open to capture clients at different locations upon request 
+                            for an additional charge. 
+                        </p>
+                    </div>
+                    <div class="bottom-info">
+                        <div class="info">
+                            <a href="#">
+                                <img src="images/tips/calendar.svg" alt="">
+                                <span>Today</span>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="#">
+                                <img src="images/tips/user.svg" alt="">
+                                <span>James Calzoni</span>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="#">
+                                <img src="images/tips/comment.svg" alt="">
+                                <span>17</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hotels-grid activities">
+        <div class="container title-with-button">
+            <div class="main-heading">
+                <h2>Activities</h2>
+            </div>
+            <div class="button-wrap">
+                <a class="main-button" href="#">View all <img src="images/additional/button-arrow.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="container grid">
+            <div class="main-box">
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="images/activities/sailing.jpg" alt="Big Sur">
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <h4>Sailing</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="main-box">
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="images/activities/climbing.jpg" alt="Big Sur">
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <h4>Climbing</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="main-box">
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="images/activities/skiing.jpg" alt="Big Sur">
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <h4>Skiing</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="main-box">
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="images/activities/hiking.jpg" alt="Big Sur">
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <h4>Hiking</h4>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
     
 
     <script src="scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
