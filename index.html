@@ -7,12 +7,11 @@
     <title>2rism - Home</title>
     <link rel="icon" type="image/x-icon" href="images/logo/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="main-header">
+    <header id="main-header" class="animate__animated" data-anim="animate__fadeIn">
         <div class="container">
             <div class="header-logo">
                 <a href="/">
@@ -67,10 +66,10 @@
     <section class="main-hero">
         <div class="small-container">
             <div class="title-wrap">
-                <h1 class="animate__animated animate__zoomIn">Discover the most engaging places</h1>
+                <h1 class="animate__animated" data-anim="animate__fadeInLeft">Discover the most engaging places</h1>
                 <a href="#" class="big-button"><img src="images/additional/big-button-icon.svg" alt="discover">Discover on 3D Globe</a>
             </div>
-            <div class="search-wrap animate__animated animate__fadeInLeft">
+            <div class="search-wrap animate__animated" data-anim="animate__fadeInUp">
                 <div class="search-items">
                     <div class="search-item">
                         <div class="icon"><img src="images/additional/search-map-pin-icon.svg" alt="location"></div>
@@ -111,10 +110,10 @@
     <section class="popular-grid">
         <div class="container">
             <div class="main-heading">
-                <h2>Popular Destinations</h2>
+                <h2 class="animate__animated" data-anim="animate__slideInRight">Popular Destinations</h2>
             </div>
         </div>
-        <div class="container grid">
+        <div class="container grid animate__animated" data-anim="animate__fadeInUp">
             <div class="main-box">
                 <div class="img-wrap">
                     <a href="#">
@@ -198,14 +197,14 @@
 
     <section class="hotels-grid">
         <div class="container title-with-button">
-            <div class="main-heading" data-aos="fade-up">
-                <h2>Hotels and Restaurants</h2>
+            <div class="main-heading">
+                <h2 class="animate__animated" data-anim="animate__slideInRight">Hotels and Restaurants</h2>
             </div>
             <div class="button-wrap">
-                <a class="main-button" href="#">View all <img src="images/additional/button-arrow.svg" alt=""></a>
+                <a class="main-button animate__animated" data-anim="animate__zoomIn" href="#">View all <img src="images/additional/button-arrow.svg" alt=""></a>
             </div>
         </div>
-        <div class="container grid">
+        <div class="container grid animate__animated" data-anim="animate__bounceIn">
             <div class="main-box">
                 <div class="img-wrap">
                     <a href="#">
@@ -312,13 +311,13 @@
     <section class="tips-grid">
         <div class="container title-with-button">
             <div class="main-heading">
-                <h2>Travel Tips and Advice</h2>
+                <h2 class="animate__animated" data-anim="animate__slideInRight">Travel Tips and Advice</h2>
             </div>
             <div class="button-wrap">
-                <a class="main-button" href="#">View all <img src="images/additional/button-arrow.svg" alt=""></a>
+                <a class="main-button animate__animated" data-anim="animate__zoomIn" href="#">View all <img src="images/additional/button-arrow.svg" alt=""></a>
             </div>
         </div>
-        <div class="container grid">
+        <div class="container grid animate__animated" data-anim="animate__fadeIn">
             <div class="main-box">
                 <div class="img-wrap">
                     <a href="#">
@@ -397,13 +396,13 @@
     <section class="hotels-grid activities">
         <div class="container title-with-button">
             <div class="main-heading">
-                <h2>Activities</h2>
+                <h2 class="animate__animated" data-anim="animate__slideInRight">Activities</h2>
             </div>
             <div class="button-wrap">
-                <a class="main-button" href="#">View all <img src="images/additional/button-arrow.svg" alt=""></a>
+                <a class="main-button animate__animated" data-anim="animate__zoomIn" href="#">View all <img src="images/additional/button-arrow.svg" alt=""></a>
             </div>
         </div>
-        <div class="container grid">
+        <div class="container grid animate__animated" data-anim="animate__fadeInLeft">
             <div class="main-box">
                 <div class="img-wrap">
                     <a href="#">
@@ -455,12 +454,30 @@
             </div>
         </div>
     </section>
+
+    <section class="about-us">
+        <div class="small-container grid">
+            <div class="text-col">
+                <div class="main-heading">
+                    <h2 class="animate__animated" data-anim="animate__slideInRight">About Us</h2>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a sapien justo. 
+                    Nulla facilisis tristique imperdiet. Nullam a placerat odio. Sed in ex augue. 
+                    Aliquam porta consectetur lorem sit amet ultrices. Class aptent taciti sociosqu 
+                    ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+                <div class="button-wrap">
+                    <a class="main-button animate__animated" data-anim="animate__zoomIn" href="#">View all <img src="images/additional/button-arrow.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="img-col">
+                <img class="animate__animated" data-anim="animate__bounceIn" src="images/about-us.jpg" alt="about-us">
+            </div>
+        </div>
+    </section>
     
 
     <script src="scripts.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>

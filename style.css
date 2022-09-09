@@ -18,6 +18,7 @@ body{
     font-weight: 400;
     font-size: 14px;
     color: #5B5B5B;
+    overflow-x: hidden;
 }
 .container{
     padding: 0 15px;
@@ -25,7 +26,8 @@ body{
     max-width: 1536px;
     margin: 0 auto;
 }
-.container.grid{
+.container.grid,
+.small-container.grid{
     display: grid;
     gap: 30px;
 }
@@ -58,7 +60,7 @@ h4{
     font-weight: 500;
 }
 .main-heading {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 .title-with-button .main-heading {
     margin-bottom: 20px;
@@ -516,7 +518,25 @@ section.tips-grid .main-box .bottom-info .info a img {
 }
 
 
+/*-----------About us------------*/
 
+section.about-us{
+    padding-bottom: 70px;
+    font-size: 16px;
+}
+
+section.about-us p{
+    font-size: 16px;
+    line-height: 32px;
+}
+
+section.about-us .button-wrap {
+    margin-top: 40px;
+}
+
+section.about-us img {
+    border-radius: 24px;
+}
 
 
 /*------------Responsive rules--------------*/
@@ -561,7 +581,7 @@ section.tips-grid .main-box .bottom-info .info a img {
     section.tips-grid .main-box .img-wrap, section.tips-grid .main-box .content {
         width: 50%;
     }
-    .main-box .content {
+    section.tips-grid .main-box .content {
         margin-top: 0;
         display: flex;
         flex-direction: column;
@@ -628,6 +648,10 @@ section.tips-grid .main-box .bottom-info .info a img {
     .main-heading h2{
         font-size: 32px;
     }
+    section.about-us .small-container.grid {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -671,6 +695,9 @@ section.tips-grid .main-box .bottom-info .info a img {
     section.tips-grid .main-box .content p {
         font-size: 16px;
         line-height: 32px;
+    }
+    section.about-us{
+        padding-bottom: 120px;
     }
 }
 

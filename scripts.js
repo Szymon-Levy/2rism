@@ -28,3 +28,21 @@ function scrollFunction (){
     }
     
 };
+
+
+//animations intersection observer
+
+const animatedElements = document.querySelectorAll(".animate__animated");
+
+const animationsObserver = new IntersectionObserver(elements => {
+    elements.forEach( element => {
+        if(element.isIntersecting){
+            let animationAttribute = element.target.getAttribute("data-anim");
+            element.target.classList.add(animationAttribute);
+        }
+    });
+});
+
+animatedElements.forEach(element => {
+    animationsObserver.observe(element);
+});
