@@ -12,6 +12,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Poppins', sans-serif;
     position: relative;
@@ -128,7 +131,12 @@ a.main-button img {
 #main-header.sticky {
     position: fixed;
     background-color: black;
+    padding: 10px 0;
     animation: stickyHeaderAnim .5s;
+}
+
+#main-header.sticky .header-logo img {
+    width: 85px;
 }
 
 @keyframes stickyHeaderAnim {
@@ -293,7 +301,7 @@ a.main-button img {
 }
 
 #main-navigation ul li a {
-    color: var(--light-gray);
+    color: white;
     font-weight: 600;
     font-size: 30px;
     line-height: 1.1;
@@ -302,7 +310,7 @@ a.main-button img {
 
 #main-navigation ul li a.active,
 #main-navigation ul li a:hover {
-    color: white;
+    color: var(--main-color);
 }
 
 
@@ -311,7 +319,7 @@ a.main-button img {
 /*-----------hero section------------*/
 
 .main-hero {
-    background-image: url("images/hero/hero-image.jpg");
+    background-image: url("images/hero/hero-image3.jpg");
     background-size: cover;
     background-position: bottom center;
     display: flex;

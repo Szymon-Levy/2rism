@@ -8,6 +8,19 @@ offcanvasToggler.addEventListener("click", () => {
     mainNavigation.classList.toggle("active");
 });
 
+// close offcanvas when menu item clicked
+
+const menuPositions = document.querySelectorAll("#main-navigation ul li");
+
+if (menuPositions){
+    menuPositions.forEach(item => {
+        item.addEventListener("click", () =>{
+            offcanvasToggler.classList.remove("active");
+            mainNavigation.classList.remove("active");
+        })
+    })
+}
+
 
 //sticky header
 
